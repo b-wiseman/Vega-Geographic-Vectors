@@ -1,0 +1,77 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 500,
+  "title": "Cell Phone Towers in US Counties 2016 (Counties without are circled)",
+  "layer": [
+    {
+      "data": {
+        "url": "data/us-10m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "counties"
+        }
+      },
+      "projection": {
+        "type": "albersUsa"
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray",
+        "stroke": "white"
+      }
+    },
+    {
+      "data": {
+        "url": "data/Cellular_Towers.csv"
+      },
+      "projection": {
+        "type": "albersUsa"
+      },
+      "mark": "circle",
+      "encoding": {
+        "longitude": {
+          "field": "X",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Y",
+          "type": "quantitative"
+        },
+        "size": {"value": 5},
+        "color": {"value": "#1A37AD"}
+      }
+    },
+    {
+      "data": {
+          "values": [
+              {"X": -99.79911, "Y": 28.973388, "img": "images/black-circle.png"},
+              {"X": -96.782063, "Y": 29.82857, "img": "images/black-circle.png"},
+              {"X": -107.876137, "Y": 47.125628, "img": "images/black-circle.png"},
+              {"X": -98.285072, "Y": 26.923445, "img": "images/black-circle.png"},
+              {"X": -97.028139, "Y": 32.798451, "img": "images/black-circle.png"},
+              {"X": -99.540248, "Y": 44.5, "img": "images/black-circle.png"}
+          ]
+      },
+      "mark": {
+          "type": "image",
+          "width": 35,
+          "height": 35
+      },
+      "encoding": {
+          "longitude": {
+              "field": "X",
+              "type": "quantitative"
+          },
+          "latitude": {
+              "field": "Y",
+              "type": "quantitative"
+          },
+          "url": {
+              "field": "img",
+              "type": "nominal"
+          }
+      }
+    }
+  ]
+}

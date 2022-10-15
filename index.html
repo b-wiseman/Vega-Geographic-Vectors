@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <title>Geographic Vectors</title>
+</head>
+
+<body > 
+  <h1>Geographic Vectors</h1>
+  <h2>Hypothesis</h2>
+  <p>
+    There are no counties in the United States without a cellphone tower within it's boundaries. 
+  </p>  
+  <h2> Data Sources</h2>
+  <p>
+    All data was taken from <a href="https://data.world/dhs/cellular-towers">https://data.world/dhs/cellular-towers</a>
+  </p>
+
+
+  <div id="vis2"></div>
+
+  <script>
+    const spec2 = "map.vl.json";
+    vegaEmbed("#vis2", spec2)
+      // result.view provides access to the Vega View API
+      .then(result => console.log(result))
+      .catch(console.warn);
+  </script>
+
+
+
+  
+  <h2>Results</h2>
+  <p>
+    My hypothesis stemmed from the understanding that cell towers become more scarce the further west you are 
+    in the United States while counties also tend to become larger, allowing for a higher chance of containing 
+    at least one cell phone tower. After visualizing the data I found that there are in fact multiple US counties 
+    without a cellphone tower within their boundaries. However, it is a very small amount. A measly 10 out of 
+    3,006 counties in the US do not have a cell phone tower within their boundaries as of 2016. It is possible that 
+    in 2022 these counties have since aquired a tower but the only applicable data I could find was from 2016.
+    <br><br>
+    The most interesting part of this visualization is the northmost void in Texas. This is where Dallas is located.
+    This makes me think that there is some sort of law or policy that does not allow cell phone towers to be built 
+    in the metropolitan area of Dallas.
+  </p>
+
+
+  <h2>Color Choice</h2>
+    <p>
+      When choosing a color I noticed that desaturated colors made the cell tower voids 
+      subside whereas a very bright and saturated blue made them stand out to the eye. 
+      Being that these voids are the focus of this visualization I wanted them to stand out
+      but was also aware that a very saturated blue made the visualization feel unprofessional.
+      I found that darkening the blue rather than desaturating it achieved this without 
+      sacrificing the professional credibility of the visualization.
+  </p>
+
+  
+  <h3>Counties without Towers:</h3>
+  <p>
+    Petroleum County, Montana - Population: 496<br>
+    Hyde County, South Dakota - Population: 1,262<br>
+    Dallas County, Texas - Population: 2,623,000<br>
+    Tarrant County, Texas - Population: 2,077,000<br>
+    Colorado County, Texas - Population: 20,557<br>
+    Fayette County, Texas - Population: 25,247<br>
+    Jim Hogg County, Texas - Population: 5,187<br>
+    Brooks County, Texas - Population: 7,100<br>
+    Zavala County, Texas - Population: 11,930<br>
+    Uvalde County, Texas - Population: 26,899<br>
+    <p>
+  
+
+
+
+</body>
+
+
+
+
+
+
+
+

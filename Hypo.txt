@@ -1,0 +1,46 @@
+
+HYPOTHESIS:
+There are no counties in the USA without a cellphone tower in its boundaries.
+
+I understood that cell towers became more scarce in the midwest due to less population
+but I also knew that counties in these areas are also larger making the hypothesis plausible.
+
+
+
+
+DATA:
+https://data.world/dhs/cellular-towers
+
+
+
+
+NOTES:
+Maybe try to outline state boundaries in black?
+
+Try to cover up the outlier in top left corner
+
+Mark Dallas on the map to indicate hole in towers
+
+
+
+
+COLOR CHOICE:
+When playing around with color I noticed that super 
+saturated colors realy help make the "holes" where 
+there are no cellphone towers catch your eye. However, 
+this made the visualization look quite unprofessional. 
+By darkening the color rather than desaturating I was 
+able to find a middle ground that both makes the "holes" 
+pop as well as looking professional.
+
+When choosing a color I noticed that desaturated colors made the cell tower voids 
+subside. Whereas a very saturated blue made those voids stand out to your eye. 
+Being that they are the focus of this visualization I wanted them to stand out.
+I found that darkening the blue rather than desaturating it achieved this without 
+sacrificing the professionalism of the visualization. 
+
+
+
+
+
+
